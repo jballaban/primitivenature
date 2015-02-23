@@ -1,7 +1,7 @@
 require.config({
 	baseUrl: 'lib',
     paths: {
-        jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
+        jquery: 'ref/jquery-2.1.3.min',
     }
 });
 
