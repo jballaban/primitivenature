@@ -7,7 +7,8 @@ require.config({
 
 requirejs([
 	'jquery', 
-	'ref/joii.min', 
-	'Framework/Main'
+	'ref/joii.min',
+	'ref/sprintf.min',
+	'Game'
 	], function() {}
 );
