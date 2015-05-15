@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<script src="lib/ref/jsclass/loader-browser.js"></script>
 		<script src="lib/ref/jquery-2.1.3.min.js"></script>
 		<script src="lib/ref/FPSMeter.js"></script>
+		<script src="lib/framework/loader.js"></script>
 		<style>
 			html,body { margin:0; background-color:black; cursor:none; }
 		</style>
@@ -13,18 +13,6 @@
 		<audio hidden loop autoplay>
 		  <source src="asset/soundtrack.mp3" type="audio/mpeg">
 		</audio>
-		<script>
-			JS.packages(function() { with(this) {
-			    file('lib/Framework/Framework.js').provides('Framework');
-			}});
-			JS.packages(function() { with(this) {
-			    file('lib/Game.js').provides('Game');
-			}});
-			JS.require('JS.Class', 'JS.Singleton', 'JS.State', function() {
-				JS.require('Framework', function() {
-					JS.require('Game');
-				});
-			});
-		</script>
+		
 	</body>
 </html>
