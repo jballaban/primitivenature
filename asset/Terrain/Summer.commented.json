@@ -1,0 +1,220 @@
+//Key
+//Terrain
+//null-Undefined
+//0-Nothing
+//1-Ocean
+//2-Shallows
+//3-Grass
+//4-LongGrass
+//5-Dirt
+//6-Mud
+//Terrain slots are diagonal starting from the top-right moving clockwise
+
+
+//Structure
+//null-Undefined
+//-[x:1-9]-Not -x
+//0-Nothing
+//1-Wall
+//2-DamagedWall
+//3-ReinforcedWall
+//4-DamagedReinforcedWall
+//5-DestroyedWall
+//6-HeavyTrees
+//7-Trees
+//8-Stumps
+//9-Boulders
+//NonTerrain slots are orthogonal starting from the top moving clockwise
+
+//Per-tile IDs are automatically set. ORDER IS IMPORTANT! Changing the order here invalidates all previously created maps.
+
+{
+	"sheet":{
+		"file": "asset/Terrain/Summer.png",
+		"tileToTileDistance": {"x":33,"y":33},
+		"firstTileOffset":{"x":0,"y":0},
+		"tileSize":{"x":32,"y":32},
+		"tilesPerRow":19
+	},
+	"tiles":[
+		//Terrain tiles
+
+		//Dirt-Mud Transitionals
+		{"slots":[5,5,5,6],"tilesheetIndexes":[{"x":9,"y":9}]},
+		{"slots":[6,5,5,5],"tilesheetIndexes":[{"x":10,"y":9,"run":2}]},
+		{"slots":[6,5,5,6],"tilesheetIndexes":[{"x":12,"y":9,"run":3}]},
+		{"slots":[5,5,6,5],"tilesheetIndexes":[{"x":15,"y":9}]},
+		{"slots":[5,5,6,6],"tilesheetIndexes":[{"x":17,"y":9,"run":3}]},
+		{"slots":[6,5,6,5],"tilesheetIndexes":[{"x":1,"y":10,"run":2}]},
+		{"slots":[6,5,6,6],"tilesheetIndexes":[{"x":3,"y":10}]},
+		{"slots":[5,6,5,5],"tilesheetIndexes":[{"x":4,"y":10}]},
+		{"slots":[5,6,5,6],"tilesheetIndexes":[{"x":5,"y":10,"run":2}]},
+		{"slots":[6,6,5,5],"tilesheetIndexes":[{"x":7,"y":10,"run":3}]},
+		{"slots":[6,6,5,6],"tilesheetIndexes":[{"x":10,"y":10}]},
+		{"slots":[5,6,6,5],"tilesheetIndexes":[{"x":11,"y":10,"run":3}]},
+		{"slots":[5,6,6,6],"tilesheetIndexes":[{"x":14,"y":10}]},
+		{"slots":[6,6,6,5],"tilesheetIndexes":[{"x":15,"y":10}]},
+		//Dirt-Shallows Transitionals
+		{"slots":[5,5,5,2],"tilesheetIndexes":[{"x":16,"y":10,"run":2}]},
+		{"slots":[2,5,5,5],"tilesheetIndexes":[{"x":18,"y":10,"run":2}]},
+		{"slots":[2,5,5,2],"tilesheetIndexes":[{"x":1,"y":11,"run":3}]},
+		{"slots":[5,5,2,5],"tilesheetIndexes":[{"x":4,"y":11,"run":2}]},
+		{"slots":[5,5,2,2],"tilesheetIndexes":[{"x":6,"y":11,"run":3}]},
+		{"slots":[2,5,2,5],"tilesheetIndexes":[{"x":9,"y":11},{"x":8,"y":12}]},
+		{"slots":[2,5,2,2],"tilesheetIndexes":[{"x":10,"y":11,"run":2}]},
+		{"slots":[5,2,5,5],"tilesheetIndexes":[{"x":12,"y":11,"run":2}]},
+		{"slots":[5,2,5,2],"tilesheetIndexes":[{"x":14,"y":11},{"x":9,"y":12}]},
+		{"slots":[2,2,5,5],"tilesheetIndexes":[{"x":15,"y":11,"run":3}]},
+		{"slots":[2,2,5,2],"tilesheetIndexes":[{"x":18,"y":11,"run":2}]},
+		{"slots":[5,2,2,5],"tilesheetIndexes":[{"x":1,"y":12,"run":3}]},
+		{"slots":[5,2,2,2],"tilesheetIndexes":[{"x":4,"y":12,"run":2}]},
+		{"slots":[2,2,2,5],"tilesheetIndexes":[{"x":6,"y":12,"run":2}]},
+		//Grass-LongGrass Transitionals
+		{"slots":[3,3,3,4],"tilesheetIndexes":[{"x":10,"y":12,"run":2}]},
+		{"slots":[4,3,3,3],"tilesheetIndexes":[{"x":12,"y":12,"run":2}]},
+		{"slots":[4,3,3,4],"tilesheetIndexes":[{"x":14,"y":12,"run":3}]},
+		{"slots":[3,3,4,3],"tilesheetIndexes":[{"x":17,"y":12,"run":2}]},
+		{"slots":[3,3,4,4],"tilesheetIndexes":[{"x":0,"y":13,"run":3}]},
+		{"slots":[4,3,4,3],"tilesheetIndexes":[{"x":3,"y":13,"run":2}]},
+		{"slots":[4,3,4,4],"tilesheetIndexes":[{"x":5,"y":13,"run":2}]},
+		{"slots":[3,4,3,3],"tilesheetIndexes":[{"x":7,"y":13,"run":2}]},
+		{"slots":[3,4,3,4],"tilesheetIndexes":[{"x":9,"y":13,"run":2}]},
+		{"slots":[4,4,3,3],"tilesheetIndexes":[{"x":12,"y":13,"run":3}]},
+		{"slots":[4,4,3,4],"tilesheetIndexes":[{"x":14,"y":13,"run":2}]},
+		{"slots":[3,4,4,3],"tilesheetIndexes":[{"x":17,"y":13,"run":3}]},
+		{"slots":[3,4,4,4],"tilesheetIndexes":[{"x":0,"y":14,"run":2}]},
+		{"slots":[4,4,4,3],"tilesheetIndexes":[{"x":2,"y":14,"run":2}]},
+		//Grass-Dirt Transitionals
+		{"slots":[3,3,3,5],"tilesheetIndexes":[{"x":4,"y":14,"run":2}]},
+		{"slots":[5,3,3,3],"tilesheetIndexes":[{"x":6,"y":14,"run":2}]},
+		{"slots":[5,3,3,5],"tilesheetIndexes":[{"x":8,"y":14,"run":3}]},
+		{"slots":[3,3,5,3],"tilesheetIndexes":[{"x":11,"y":14,"run":2}]},
+		{"slots":[3,3,5,5],"tilesheetIndexes":[{"x":13,"y":14,"run":3}]},
+		{"slots":[5,3,5,3],"tilesheetIndexes":[{"x":16,"y":14,"run":2}]},
+		{"slots":[5,3,5,5],"tilesheetIndexes":[{"x":18,"y":14}]},
+		{"slots":[3,5,3,3],"tilesheetIndexes":[{"x":0,"y":15,"run":2}]},
+		{"slots":[3,5,3,5],"tilesheetIndexes":[{"x":2,"y":15,"run":2}]},
+		{"slots":[5,5,3,3],"tilesheetIndexes":[{"x":4,"y":15,"run":3}]},
+		{"slots":[5,5,3,5],"tilesheetIndexes":[{"x":7,"y":15}]},
+		{"slots":[3,5,5,3],"tilesheetIndexes":[{"x":8,"y":15,"run":3}]},
+		{"slots":[3,5,5,5],"tilesheetIndexes":[{"x":11,"y":15,"run":2}]},
+		{"slots":[5,5,5,3],"tilesheetIndexes":[{"x":13,"y":15,"run":2}]},
+		//Ocean-Shallows Transitionals
+		{"slots":[2,2,2,1],"tilesheetIndexes":[{"x":15,"y":15,"run":2}]},
+		{"slots":[1,2,2,2],"tilesheetIndexes":[{"x":17,"y":15,"run":2}]},
+		{"slots":[1,2,2,1],"tilesheetIndexes":[{"x":0,"y":16,"run":3}]},
+		{"slots":[2,2,1,2],"tilesheetIndexes":[{"x":3,"y":16,"run":2}]},
+		{"slots":[2,2,1,1],"tilesheetIndexes":[{"x":5,"y":16,"run":3}]},
+		{"slots":[1,2,1,2],"tilesheetIndexes":[{"x":8,"y":16,"run":2}]},
+		{"slots":[1,2,1,1],"tilesheetIndexes":[{"x":10,"y":16}]},
+		{"slots":[2,1,2,2],"tilesheetIndexes":[{"x":11,"y":16,"run":2}]},
+		{"slots":[2,1,2,1],"tilesheetIndexes":[{"x":13,"y":16,"run":2}]},
+		{"slots":[1,1,2,2],"tilesheetIndexes":[{"x":15,"y":16,"run":3}]},
+		{"slots":[1,1,2,1],"tilesheetIndexes":[{"x":18,"y":16}]},
+		{"slots":[2,1,1,2],"tilesheetIndexes":[{"x":0,"y":17,"run":3}]},
+		{"slots":[2,1,1,1],"tilesheetIndexes":[{"x":3,"y":17}]},
+		{"slots":[1,1,1,2],"tilesheetIndexes":[{"x":4,"y":17}]},
+		//Shallows
+		{"slots":[2,2,2,2],"tilesheetIndexes":[{"x":5,"y":17,"run":3}]},
+		//Ocean
+		{"slots":[1,1,1,1],"tilesheetIndexes":[{"x":8,"y":17,"run":3}]},
+		//Dirt
+		{"slots":[5,5,5,5],"tilesheetIndexes":[{"x":11,"y":17,"run":11}]},
+		//Mud
+		{"slots":[6,6,6,6],"tilesheetIndexes":[{"x":3,"y":18,"run":11}]},
+		//Grass
+		{"slots":[3,3,3,3],"tilesheetIndexes":[{"x":14,"y":18,"run":8}]},
+		//LongGrass
+		{"slots":[4,4,4,4],"tilesheetIndexes":[{"x":3,"y":19,"run":8}]}
+
+		//Structure Tiles
+		//Structure tiles are differentiated by having a "terrain" property
+
+		//Walls
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[-1,-1,-1,-1],"tilesheetIndexes":[{"x":16,"y":0}]},
+		{"terrain":3,"slots":[-1,-1,1,-1],"tilesheetIndexes":[{"x":17,"y":0}]},
+		{"terrain":3,"slots":[-1,1,-1,-1],"tilesheetIndexes":[{"x":18,"y":0}]},
+		{"terrain":3,"slots":[-1,1,1,-1],"tilesheetIndexes":[{"x":0,"y":1}]},
+		{"terrain":3,"slots":[1,-1,-1,-1],"tilesheetIndexes":[{"x":1,"y":1}]},
+		{"terrain":3,"slots":[1,-1,1,-1],"tilesheetIndexes":[{"x":2,"y":1,"run":2}]},
+		{"terrain":3,"slots":[1,1,-1,-1],"tilesheetIndexes":[{"x":4,"y":1}]},
+		{"terrain":3,"slots":[1,1,1,-1],"tilesheetIndexes":[{"x":5,"y":1}]},
+		{"terrain":3,"slots":[-1,-1,-1,1],"tilesheetIndexes":[{"x":6,"y":1}]},
+		{"terrain":3,"slots":[-1,-1,1,1],"tilesheetIndexes":[{"x":7,"y":1}]},
+		{"terrain":3,"slots":[-1,1,-1,1],"tilesheetIndexes":[{"x":8,"y":1,"run":2}]},
+		{"terrain":3,"slots":[-1,1,1,1],"tilesheetIndexes":[{"x":10,"y":1}]},
+		{"terrain":3,"slots":[1,-1,-1,1],"tilesheetIndexes":[{"x":11,"y":1}]},
+		{"terrain":3,"slots":[1,-1,1,1],"tilesheetIndexes":[{"x":12,"y":1}]},
+		{"terrain":3,"slots":[1,1,-1,1],"tilesheetIndexes":[{"x":13,"y":1}]},
+		{"terrain":3,"slots":[1,1,1,1],"tilesheetIndexes":[{"x":14,"y":1}]},
+		//ReinforcedWall
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[-3,-3,-3,-3],"tilesheetIndexes":[{"x":15,"y":1}]},
+		{"terrain":3,"slots":[-3,-3,3,-3],"tilesheetIndexes":[{"x":16,"y":1}]},
+		{"terrain":3,"slots":[-3,3,-3,-3],"tilesheetIndexes":[{"x":17,"y":1}]},
+		{"terrain":3,"slots":[-3,3,3,-3],"tilesheetIndexes":[{"x":18,"y":1}]},
+		{"terrain":3,"slots":[3,-3,-3,-3],"tilesheetIndexes":[{"x":0,"y":2}]},
+		{"terrain":3,"slots":[3,-3,3,-3],"tilesheetIndexes":[{"x":1,"y":2,"run":2}]},
+		{"terrain":3,"slots":[3,3,-3,-3],"tilesheetIndexes":[{"x":3,"y":2}]},
+		{"terrain":3,"slots":[3,3,3,-3],"tilesheetIndexes":[{"x":4,"y":2}]},
+		{"terrain":3,"slots":[-3,-3,-3,3],"tilesheetIndexes":[{"x":5,"y":2}]},
+		{"terrain":3,"slots":[-3,-3,3,3],"tilesheetIndexes":[{"x":6,"y":2}]},
+		{"terrain":3,"slots":[-3,3,-3,3],"tilesheetIndexes":[{"x":7,"y":2,"run":2}]},
+		{"terrain":3,"slots":[-3,3,3,3],"tilesheetIndexes":[{"x":9,"y":2}]},
+		{"terrain":3,"slots":[3,-3,-3,3],"tilesheetIndexes":[{"x":10,"y":2}]},
+		{"terrain":3,"slots":[3,-3,3,3],"tilesheetIndexes":[{"x":11,"y":2}]},
+		{"terrain":3,"slots":[3,3,-3,3],"tilesheetIndexes":[{"x":12,"y":2}]},
+		{"terrain":3,"slots":[3,3,3,3],"tilesheetIndexes":[{"x":13,"y":2}]},
+		//DamagedWall
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[-2,-2,-2,-2],"tilesheetIndexes":[{"x":14,"y":2}]},
+		{"terrain":3,"slots":[-2,-2,2,-2],"tilesheetIndexes":[{"x":15,"y":2}]},
+		{"terrain":3,"slots":[-2,2,-2,-2],"tilesheetIndexes":[{"x":16,"y":2}]},
+		{"terrain":3,"slots":[-2,2,2,-2],"tilesheetIndexes":[{"x":17,"y":2}]},
+		{"terrain":3,"slots":[2,-2,-2,-2],"tilesheetIndexes":[{"x":18,"y":2}]},
+		{"terrain":3,"slots":[2,-2,2,-2],"tilesheetIndexes":[{"x":0,"y":3,"run":2}]},
+		{"terrain":3,"slots":[2,2,-2,-2],"tilesheetIndexes":[{"x":2,"y":3}]},
+		{"terrain":3,"slots":[2,2,2,-2],"tilesheetIndexes":[{"x":3,"y":3}]},
+		{"terrain":3,"slots":[-2,-2,-2,2],"tilesheetIndexes":[{"x":4,"y":3}]},
+		{"terrain":3,"slots":[-2,-2,2,2],"tilesheetIndexes":[{"x":5,"y":3}]},
+		{"terrain":3,"slots":[-2,2,-2,2],"tilesheetIndexes":[{"x":6,"y":3,"run":2}]},
+		{"terrain":3,"slots":[-2,2,2,2],"tilesheetIndexes":[{"x":8,"y":3}]},
+		{"terrain":3,"slots":[2,-2,-2,2],"tilesheetIndexes":[{"x":9,"y":3}]},
+		{"terrain":3,"slots":[2,-2,2,2],"tilesheetIndexes":[{"x":10,"y":3}]},
+		{"terrain":3,"slots":[2,2,-2,2],"tilesheetIndexes":[{"x":11,"y":3}]},
+		{"terrain":3,"slots":[2,2,2,2],"tilesheetIndexes":[{"x":12,"y":3}]},
+		//DamagedReinforcedWall
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[-4,-4,-4,-4],"tilesheetIndexes":[{"x":13,"y":3}]},
+		{"terrain":3,"slots":[-4,-4,4,-4],"tilesheetIndexes":[{"x":14,"y":3}]},
+		{"terrain":3,"slots":[-4,4,-4,-4],"tilesheetIndexes":[{"x":15,"y":3}]},
+		{"terrain":3,"slots":[-4,4,4,-4],"tilesheetIndexes":[{"x":16,"y":3}]},
+		{"terrain":3,"slots":[4,-4,-4,-4],"tilesheetIndexes":[{"x":17,"y":3}]},
+		{"terrain":3,"slots":[4,-4,4,-4],"tilesheetIndexes":[{"x":18,"y":3,"run":2}]},
+		{"terrain":3,"slots":[4,4,-4,-4],"tilesheetIndexes":[{"x":1,"y":4}]},
+		{"terrain":3,"slots":[4,4,4,-4],"tilesheetIndexes":[{"x":2,"y":4}]},
+		{"terrain":3,"slots":[-4,-4,-4,4],"tilesheetIndexes":[{"x":3,"y":4}]},
+		{"terrain":3,"slots":[-4,-4,4,4],"tilesheetIndexes":[{"x":4,"y":4}]},
+		{"terrain":3,"slots":[-4,4,-4,4],"tilesheetIndexes":[{"x":5,"y":4,"run":2}]},
+		{"terrain":3,"slots":[-4,4,4,4],"tilesheetIndexes":[{"x":7,"y":4}]},
+		{"terrain":3,"slots":[4,-4,-4,4],"tilesheetIndexes":[{"x":8,"y":4}]},
+		{"terrain":3,"slots":[4,-4,4,4],"tilesheetIndexes":[{"x":9,"y":4}]},
+		{"terrain":3,"slots":[4,4,-4,4],"tilesheetIndexes":[{"x":10,"y":4}]},
+		{"terrain":3,"slots":[4,4,4,4],"tilesheetIndexes":[{"x":11,"y":4}]},
+		//DestroyedWall
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[null,null,null,null],"tilesheetIndexes":[{"x":12,"y":4,"run":14}]},
+		//Trees
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[null,null,null,null],"tilesheetIndexes":[{"x":7,"y":5,"run":24},{"x":13,"y":6,"run":15}]},
+		//Stumps
+		//baseTerrain: Grass
+		{"terrain":3,"slots":[null,null,null,null],"tilesheetIndexes":[{"x":12,"y":6}]},
+		//TODO: EXPAND
+		//Boulders
+		//baseTerrain: Mud
+		{"terrain":6,"slots":[null,null,null,null],"tilesheetIndexes":[{"x":9,"y":7,"run":38}]}
+		//TODO: EXPAND
+	]
+}
